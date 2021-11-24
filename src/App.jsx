@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import data from './data/planes.json'
+import React from 'react';
 import './assets/styles/app.scss'
+import { Planes } from './Planes';
 
 function App() {
-    console.log(data.data);
     return (
         <div className="App">
         <header>
@@ -11,28 +10,7 @@ function App() {
         </header>
         <main>
             <h2>What aircraft do you want to fly?</h2>
-            <div className="aircraft-finder">
-                <form>
-                    <label htmlFor="aircraft">
-                        Choose a model
-                    </label>
-                    <select name="aircraft">
-                        {
-                            data.data.map(plane => {
-                                return (
-                                    <option value={plane.makeModel}>
-                                        {plane.makeModel}
-                                    </option>
-                                )
-                                
-                            })
-                        }
-                    </select>
-                </form>
-            </div>
-            <div id="aircraft-data">
-
-            </div>
+            <Planes />            
         </main>
     </div>
     )
