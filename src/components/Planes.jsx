@@ -106,66 +106,69 @@ export const Planes = () => {
         </form>
       </div>
       {filteredPlanes && (
-        <table id='aircraft-data'>
-          <thead>
-            <tr>
-              <th>Make &amp; model</th>
-              <th>Seats</th>
-              <th>Cruise speed</th>
-              <th>Fuel type</th>
-              <th>Total fuel</th>
-              <th>GPH</th>
-              <th>MTOW</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.data
-              .filter(plane => plane.makeModel === selectedPlane)
-              .map((plane, key) => {
-                // console.log(plane);
-                const totalFuel = calcTotalFuel(plane);
+        <>
+          <h2>Possible candidates</h2>
+          <table id='aircraft-data'>
+            <thead>
+              <tr>
+                <th>Make &amp; model</th>
+                <th>Seats</th>
+                <th>MTOW</th>
+                <th>Cruise speed</th>
+                <th>Fuel type</th>
+                <th>Total fuel</th>
+                <th>GPH</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.data
+                .filter(plane => plane.makeModel === selectedPlane)
+                .map((plane, key) => {
+                  // console.log(plane);
+                  const totalFuel = calcTotalFuel(plane);
 
+                  return (
+                    <>
+                      <tr key='selected'>
+                        <td colSpan='7' className='separator'>
+                          Selected
+                        </td>
+                      </tr>
+                      <tr key={key + 'asdf'}>
+                        <td>{plane.makeModel}</td>
+                        <td>{plane.seats}</td>
+                        <td>{plane.mtow}</td>
+                        <td>{plane.cruise}</td>
+                        <td>{plane.fuelType}</td>
+                        <td>{totalFuel}</td>
+                        <td>{plane.gph}</td>
+                      </tr>
+                      <tr key='selected'>
+                        <td colSpan='7' className='separator'>
+                          Possible matches
+                        </td>
+                      </tr>
+                    </>
+                  );
+                })}
+
+              {filteredPlanes.map((plane, key) => {
+                const totalFuel = calcTotalFuel(plane);
                 return (
-                  <>
-                    <tr key='selected'>
-                      <td colSpan='7' className='separator'>
-                        Selected
-                      </td>
-                    </tr>
-                    <tr key={key + 'asdf'}>
-                      <td>{plane.makeModel}</td>
-                      <td>{plane.seats}</td>
-                      <td>{plane.cruise}</td>
-                      <td>{plane.fuelType}</td>
-                      <td>{totalFuel}</td>
-                      <td>{plane.gph}</td>
-                      <td>{plane.mtow}</td>
-                    </tr>
-                    <tr key='selected'>
-                      <td colSpan='7' className='separator'>
-                        Possible matches
-                      </td>
-                    </tr>
-                  </>
+                  <tr key={key}>
+                    <td>{plane.makeModel}</td>
+                    <td>{plane.seats}</td>
+                    <td>{plane.mtow}</td>
+                    <td>{plane.cruise}</td>
+                    <td>{plane.fuelType}</td>
+                    <td>{totalFuel}</td>
+                    <td>{plane.gph}</td>
+                  </tr>
                 );
               })}
-
-            {filteredPlanes.map((plane, key) => {
-              const totalFuel = calcTotalFuel(plane);
-              return (
-                <tr key={key}>
-                  <td>{plane.makeModel}</td>
-                  <td>{plane.seats}</td>
-                  <td>{plane.cruise}</td>
-                  <td>{plane.fuelType}</td>
-                  <td>{totalFuel}</td>
-                  <td>{plane.gph}</td>
-                  <td>{plane.mtow}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </>
       )}
     </>
   );
