@@ -8,7 +8,7 @@ function App () {
     <div className="App">
       <Header />
       <main>
-        <h2>What aircraft do you want to fly?</h2>
+        <h2>Which aircraft do you want to fly?</h2>
         <Planes />
       </main>
     </div>

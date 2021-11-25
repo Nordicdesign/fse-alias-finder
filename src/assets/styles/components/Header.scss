@@ -1,5 +1,13 @@
 header {
   border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+  p {
+    font-size: .9rem;
+  }
   sup {
     font-size: .6rem;
     font-weight: normal;
