@@ -20,7 +20,11 @@ export const Planes = () => {
             onChange={showAllPlanes}
           >
             {data.data.map((plane, key) => {
-              return <option key={key} value={plane.makeModel}>{plane.makeModel}</option>;
+              return (
+                <option key={key} value={plane.makeModel}>
+                  {plane.makeModel}
+                </option>
+              );
             })}
           </select>
         </form>
