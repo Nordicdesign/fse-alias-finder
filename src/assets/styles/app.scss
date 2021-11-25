@@ -1,13 +1,15 @@
-@import './components/forms.scss';
+@use "sass:math";
 
+@import './variables.scss';
+// generics
+@import './components/forms.scss';
+@import './components/tables.scss';
 // components
 @import './components/Header.scss';
+
 // pages
 
-html, body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-header {
-    border-bottom: 1px solid #ccc;
+html,
+body {
+  font-family: $font-stack;
 }
