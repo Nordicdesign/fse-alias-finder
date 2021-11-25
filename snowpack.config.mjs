@@ -4,7 +4,12 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
   plugins: [
-    '@snowpack/plugin-sass'
+    [
+      '@snowpack/plugin-sass',
+      {
+        sourceMap: 'true'
+      }
+    ]
     // '@snowpack/plugin-run-script',
     // {
     //   cmd: 'eslint src --ext .js,.jsx,.ts,.tsx',
