@@ -23,9 +23,12 @@ export const Planes = () => {
     // let result = data.data.filter(
     //   plane => plane.fuelType === selectedData[0].fuelType
     // );
+
+    // Remove itself
+    let result = data.data.filter(plane => plane.makeModel !== selectedPlane);
+
     // similar cruise speed
-    // result = result.filter(plane => {
-    let result = data.data.filter(plane => {
+    result = result.filter(plane => {
       const variation = 30; // percentage up and down we allow
       const idealCruiseSpeed = selectedData[0].cruise;
       const maxCruise = idealCruiseSpeed + (idealCruiseSpeed * variation) / 100;
@@ -48,18 +51,6 @@ export const Planes = () => {
   };
 
   const calcTotalFuel = plane => {
-    // "ext1": 0,
-    // "leftTip": 0,
-    // "leftAux": 0,
-    // "leftMain": 16,
-    // "center": 0,
-    // "center2": 0,
-    // "center3": 0,
-    // "rightMain": 16,
-    // "rightAux": 0,
-    // "rightTip": 0,
-    // "ext2": 0,
-
     return (
       plane.ext1 +
       plane.leftTip +
