@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import data from '../data/aircraft.json';
+import { config } from '../config/config';
 
 export const Planes = () => {
   const selectedAircraft = useRef(null);
@@ -29,20 +30,18 @@ export const Planes = () => {
 
     // similar cruise speed
     result = result.filter(plane => {
-      const variation = 30; // percentage up and down we allow
       const idealCruiseSpeed = selectedData[0].cruise;
-      const maxCruise = idealCruiseSpeed + (idealCruiseSpeed * variation) / 100;
-      const minCruise = idealCruiseSpeed - (idealCruiseSpeed * variation) / 100;
+      const maxCruise = idealCruiseSpeed + (idealCruiseSpeed * config.cruiseVariation) / 100;
+      const minCruise = idealCruiseSpeed - (idealCruiseSpeed * config.cruiseVariation) / 100;
 
       return plane.cruise > minCruise && plane.cruise < maxCruise;
     });
 
     // similar GPH
     result = result.filter(plane => {
-      const variation = 30; // percentage up and down we allow
       const ideal = selectedData[0].gph;
       const max = ideal + (ideal * 5) / 100;
-      const min = ideal - (ideal * variation) / 100;
+      const min = ideal - (ideal * config.gphVariation) / 100;
 
       return plane.gph > min && plane.gph < max;
     });
