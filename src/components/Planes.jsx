@@ -99,6 +99,7 @@ export const Planes = () => {
       {filteredPlanes && (
         <>
           <h2>Possible candidates</h2>
+          <p>Highly experimental! Don't be surprised if things are wrong, for any feedback find me on FSE's Discord (Nordic-FSE)</p>
           <table id='aircraft-data'>
             <thead>
               <tr>
