@@ -40,10 +40,11 @@ export const Planes = () => {
     // similar GPH
     result = result.filter(plane => {
       const ideal = selectedData[0].gph;
-      const max = ideal + (ideal * 5) / 100;
+      // const max = ideal + (ideal * 5) / 100;
       const min = ideal - (ideal * config.gphVariation) / 100;
 
-      return plane.gph > min && plane.gph < max;
+      // return plane.gph > min && plane.gph < max;
+      return plane.gph > min;
     });
     // save in state
     setFilteredPlanes(result);

@@ -1,4 +1,4 @@
 export const config = {
-  cruiseVariation: 30, // percentage up and down we allow
-  gphVariation: 30 // percentage down we allow
+  cruiseVariation: 70, // percentage up and down we allow
+  gphVariation: 20 // percentage down we allow
 };
