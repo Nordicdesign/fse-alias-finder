@@ -2,7 +2,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import data from '../data/aircraft.json';
 import { config } from '../config/config';
 
-export const Planes = () => {
+export const Planes = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { visible, typeSearch, setTypeSearch } = props;
   const selectedAircraft = useRef(null);
   const [selectedPlane, setSelectedPlane] = useState(false);
   const [filteredPlanes, setFilteredPlanes] = useState();
@@ -76,92 +78,195 @@ export const Planes = () => {
   }, [selectedPlane]);
 
   return (
-    <>
-      <div className='aircraft-finder'>
-        <form>
-          <label htmlFor='aircraft'>Model</label>
-          <select
-            ref={selectedAircraft}
-            name='aircraft'
-            onChange={showAllPlanes}
-          >
-            <option value=''>Please select</option>
-            {data.data.map((plane, key) => {
-              return (
-                <option key={key} value={plane.makeModel}>
-                  {plane.makeModel}
-                </option>
-              );
-            })}
-          </select>
-        </form>
-      </div>
-      {filteredPlanes && (
-        <>
-          <h2>Possible candidates</h2>
-          <p>Highly experimental! Don't be surprised if things are wrong, for any feedback find me on FSE's Discord (Nordic-FSE)</p>
-          <table id='aircraft-data'>
-            <thead>
-              <tr>
-                <th>Make &amp; model</th>
-                <th>Seats</th>
-                <th>MTOW</th>
-                <th>Cruise speed</th>
-                <th>Fuel type</th>
-                <th>Total fuel</th>
-                <th>GPH</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.data
-                .filter(plane => plane.makeModel === selectedPlane)
-                .map((plane, key) => {
-                  // console.log(plane);
-                  const totalFuel = calcTotalFuel(plane);
+    <div className={`planes ${visible ? 'planes-visible' : ''}`}>
+      {
+        typeSearch === 'fse' && (
+          <>
+            <div className='aircraft-finder'>
+              <h2>What FSE plane do you want to find alternatives to alias?</h2>
+              <form>
+                <label htmlFor='aircraft'>Model</label>
+                <select
+                  ref={selectedAircraft}
+                  name='aircraft'
+                  onChange={showAllPlanes}
+                >
+                  <option value=''>Please select</option>
+                  {data.data.map((plane, key) => {
+                    return (
+                      <option key={key} value={plane.makeModel}>
+                        {plane.makeModel}
+                      </option>
+                    );
+                  })}
+                </select>
+              </form>
+              <p><button onClick={() => setTypeSearch('sim')}>Search for possible aliases on my sim plane instead</button></p>
+            </div>
+            {filteredPlanes && (
+              <>
+                <h2>Possible candidates</h2>
+                <p>Highly experimental! Don&apos;t be surprised if things are wrong, for any feedback find me on FSE&apos;s Discord (Nordic-FSE)</p>
+                <table id='aircraft-data'>
+                  <thead>
+                    <tr>
+                      <th>Make &amp; model</th>
+                      <th>Seats</th>
+                      <th>MTOW</th>
+                      <th>Cruise speed</th>
+                      <th>Fuel type</th>
+                      <th>Total fuel</th>
+                      <th>GPH</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.data
+                      .filter(plane => plane.makeModel === selectedPlane)
+                      .map((plane, key) => {
+                        // console.log(plane);
+                        const totalFuel = calcTotalFuel(plane);
 
-                  return (
-                    <>
-                      <tr key='selected'>
-                        <td colSpan='7' className='separator'>
+                        return (
+                          <>
+                            <tr key='selected'>
+                              <td colSpan='7' className='separator'>
                           Selected
-                        </td>
-                      </tr>
-                      <tr key={key + 'asdf'}>
-                        <td>{plane.makeModel}</td>
-                        <td>{plane.seats}</td>
-                        <td>{plane.mtow}</td>
-                        <td>{plane.cruise}</td>
-                        <td>{plane.fuelType}</td>
-                        <td>{totalFuel}</td>
-                        <td>{plane.gph}</td>
-                      </tr>
-                      <tr key='selected'>
-                        <td colSpan='7' className='separator'>
+                              </td>
+                            </tr>
+                            <tr key={key + 'asdf'}>
+                              <td>{plane.makeModel}</td>
+                              <td>{plane.seats}</td>
+                              <td>{plane.mtow}</td>
+                              <td>{plane.cruise}</td>
+                              <td>{plane.fuelType}</td>
+                              <td>{totalFuel}</td>
+                              <td>{plane.gph}</td>
+                            </tr>
+                            <tr key='selected'>
+                              <td colSpan='7' className='separator'>
                           Possible matches
-                        </td>
-                      </tr>
-                    </>
-                  );
-                })}
+                              </td>
+                            </tr>
+                          </>
+                        );
+                      })}
 
-              {filteredPlanes.map((plane, key) => {
-                const totalFuel = calcTotalFuel(plane);
-                return (
-                  <tr key={key}>
-                    <td>{plane.makeModel}</td>
-                    <td>{plane.seats}</td>
-                    <td>{plane.mtow}</td>
-                    <td>{plane.cruise}</td>
-                    <td>{plane.fuelType}</td>
-                    <td>{totalFuel}</td>
-                    <td>{plane.gph}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </>
-      )}
-    </>
+                    {filteredPlanes.map((plane, key) => {
+                      const totalFuel = calcTotalFuel(plane);
+                      return (
+                        <tr key={key}>
+                          <td>{plane.makeModel}</td>
+                          <td>{plane.seats}</td>
+                          <td>{plane.mtow}</td>
+                          <td>{plane.cruise}</td>
+                          <td>{plane.fuelType}</td>
+                          <td>{totalFuel}</td>
+                          <td>{plane.gph}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </>
+            )}
+          </>
+        )
+      }
+
+      {
+        typeSearch === 'sim' && (
+          <>
+            <div className='aircraft-finder'>
+              <h2>What plane on your sim do you want to find alternatives to alias?</h2>
+              <form>
+                <label htmlFor='aircraft'>Model</label>
+                <select
+                  ref={selectedAircraft}
+                  name='aircraft'
+                  onChange={showAllPlanes}
+                >
+                  <option value=''>Please select</option>
+                  {data.data.map((plane, key) => {
+                    return (
+                      <option key={key} value={plane.makeModel}>
+                        {plane.makeModel}
+                      </option>
+                    );
+                  })}
+                </select>
+              </form>
+              <p><button onClick={() => setTypeSearch('fse')}>Check what FSE can be aliased instead</button></p>
+            </div>
+            {filteredPlanes && (
+              <>
+                <h2>Possible candidates</h2>
+                <p>Highly experimental! Don&apos;t be surprised if things are wrong, for any feedback find me on FSE&apos;s Discord (Nordic-FSE)</p>
+                <table id='aircraft-data'>
+                  <thead>
+                    <tr>
+                      <th>Make &amp; model</th>
+                      <th>Seats</th>
+                      <th>MTOW</th>
+                      <th>Cruise speed</th>
+                      <th>Fuel type</th>
+                      <th>Total fuel</th>
+                      <th>GPH</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.data
+                      .filter(plane => plane.makeModel === selectedPlane)
+                      .map((plane, key) => {
+                        // console.log(plane);
+                        const totalFuel = calcTotalFuel(plane);
+
+                        return (
+                          <>
+                            <tr key='selected'>
+                              <td colSpan='7' className='separator'>
+                          Selected
+                              </td>
+                            </tr>
+                            <tr key={key + 'asdf'}>
+                              <td>{plane.makeModel}</td>
+                              <td>{plane.seats}</td>
+                              <td>{plane.mtow}</td>
+                              <td>{plane.cruise}</td>
+                              <td>{plane.fuelType}</td>
+                              <td>{totalFuel}</td>
+                              <td>{plane.gph}</td>
+                            </tr>
+                            <tr key='selected'>
+                              <td colSpan='7' className='separator'>
+                          Possible matches
+                              </td>
+                            </tr>
+                          </>
+                        );
+                      })}
+
+                    {filteredPlanes.map((plane, key) => {
+                      const totalFuel = calcTotalFuel(plane);
+                      return (
+                        <tr key={key}>
+                          <td>{plane.makeModel}</td>
+                          <td>{plane.seats}</td>
+                          <td>{plane.mtow}</td>
+                          <td>{plane.cruise}</td>
+                          <td>{plane.fuelType}</td>
+                          <td>{totalFuel}</td>
+                          <td>{plane.gph}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </>
+            )}
+          </>
+        )
+      }
+
+    </div>
   );
 };

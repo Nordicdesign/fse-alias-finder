@@ -1,0 +1,6 @@
+.planes {
+    display: none;
+    &.planes-visible {
+        display: block;
+    }
+}
