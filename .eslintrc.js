@@ -27,7 +27,7 @@ module.exports = {
     'no-console': ['warn'],
     'no-debugger': ['warn'],
 
-    // Indent at 4 spaces
+    // Indent at 2 spaces
     indent: ['error', 2],
 
     // No trailing spaces in code

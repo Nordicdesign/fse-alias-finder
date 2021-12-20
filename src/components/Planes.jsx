@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import data from '../data/aircraft.json';
 import { config } from '../config/config';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export const Planes = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -102,7 +102,7 @@ export const Planes = (props) => {
               })}
             </select>
           </form>
-          <p><button onClick={() => setTypeSearch('sim')}>Search for possible aliases on my sim plane instead</button></p>
+          <p><Link to='/sim'>Search for possible aliases on my sim plane instead</Link></p>
         </div>
         {filteredPlanes && (
           <>
