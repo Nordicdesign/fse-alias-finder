@@ -1,0 +1,14 @@
+@import '../variables.scss';
+form {
+  margin: 0 0 $baseline*3;
+}
+label {
+    display: block;
+    font-weight: bold;
+}
+
+select {
+  font-size: 1rem;
+  // padding: math.div($baseline,2);
+  padding: 8px;
+}

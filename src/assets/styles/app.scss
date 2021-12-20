@@ -1,0 +1,25 @@
+@import './variables.scss';
+// generics
+@import './components/forms.scss';
+@import './components/tables.scss';
+// components
+@import './components/Header.scss';
+
+// pages
+@import './pages/Planes.scss';
+@import './pages/Home.scss';
+
+html,
+body {
+  font-family: $font-stack;
+  font-size: 16px;
+  margin: 0;
+
+  @media screen and (max-widht: 480px) {
+    font-size: 14px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

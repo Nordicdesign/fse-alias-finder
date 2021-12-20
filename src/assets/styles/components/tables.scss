@@ -1,0 +1,24 @@
+// @use "sass:math";
+@import '../variables.scss';
+
+th {
+  text-align: right;
+  // padding: math.div($baseline, 2);
+  padding: 8px;
+  &:first-child {
+    text-align: left;
+  }
+}
+td {
+  // padding: math.div($baseline, 2);
+  padding: 8px;
+  text-align: right;
+  &:first-child {
+    text-align: left;
+  }
+
+  &.separator {
+    background: #f2f3f4;
+    font-weight: bold;
+  }
+}
