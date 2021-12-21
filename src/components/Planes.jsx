@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import data from '../data/aircraft.json';
 import { config } from '../config/config';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export const Planes = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -9,9 +9,10 @@ export const Planes = (props) => {
   const selectedAircraft = useRef(null);
   const [selectedPlane, setSelectedPlane] = useState(false);
   const [filteredPlanes, setFilteredPlanes] = useState();
+  const [header, setHeader] = useState('What FSE plane do you want to find alternatives to alias?');
 
   const params = useParams();
-  console.log(params);
+  const searchType = params.type;
   // const filterType = (data,type, variation) => {
   //   const ideal = data[0][type];
   //   const max = ideal + (ideal * variation) / 100;
@@ -77,6 +78,12 @@ export const Planes = (props) => {
   };
 
   useEffect(() => {
+    if (searchType === 'sim') {
+      setHeader('What plane on your sim do you want to find alternatives to alias?');
+    }
+  }, [searchType]);
+
+  useEffect(() => {
     selectedPlane && filterPlanes();
   }, [selectedPlane]);
 
@@ -84,7 +91,8 @@ export const Planes = (props) => {
     <div className='planes'>
       <>
         <div className='aircraft-finder'>
-          <h2>What FSE plane do you want to find alternatives to alias?</h2>
+          <h2>{header}</h2>
+          <p className='note'>NOTE: Currently broken, both options return the same results. Please come back in a few days.</p>
           <form>
             <label htmlFor='aircraft'>Model</label>
             <select
@@ -102,7 +110,17 @@ export const Planes = (props) => {
               })}
             </select>
           </form>
-          <p><Link to='/sim'>Search for possible aliases on my sim plane instead</Link></p>
+          {/* {
+            searchType === 'fse' && (
+              <p><Link to='/sim'>Search for possible aliases on my sim plane instead</Link></p>
+            )
+          }
+
+          {
+            searchType === 'sim' && (
+              <p><Link to='/fse'>Search for possible aliases for my FSE plane instead</Link></p>
+            )
+          } */}
         </div>
         {filteredPlanes && (
           <>
@@ -143,7 +161,7 @@ export const Planes = (props) => {
                           <td>{totalFuel}</td>
                           <td>{plane.gph}</td>
                         </tr>
-                        <tr key='selected'>
+                        <tr key='matches'>
                           <td colSpan='7' className='separator'>
                           Possible matches
                           </td>
