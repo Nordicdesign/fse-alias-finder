@@ -6,13 +6,12 @@ import { Link } from 'react-router-dom';
 // import { useParams } from 'react-router-dom';
 
 interface PlanesProps {
-  header: string;
   searchType: string;
 }
 
 export const Planes = (props: PlanesProps) => {
 
-  const { header, searchType } = props;
+  const { searchType } = props;
 
   const [filteredPlanes, setFilteredPlanes] = useState<Plane[] | undefined>();
   const [selectedPlane, setSelectedPlane] = useState<string | boolean>(false);
@@ -33,7 +32,7 @@ export const Planes = (props: PlanesProps) => {
   const selectAPlane = () => {
     if (selectedAircraft && selectedAircraft.current) {
       const selected = selectedAircraft.current.value;
-      setSelectedPlane(selected);
+      selected === '' ? setSelectedPlane(false) : setSelectedPlane(selected);
     }
   };
 
@@ -41,7 +40,14 @@ export const Planes = (props: PlanesProps) => {
     <div className='finder-wrapper'>
       <div className='finder-search'>
         <div className='aircraft-finder'>
-          <h2>{header}</h2>
+          {
+            searchType === 'sim' ? (
+              <h2>What plane <em>on your sim</em> do you want to find alternatives to alias?</h2>
+            ) : (
+              <h2>What <em>FSE plane</em> do you want to find alternatives to alias?</h2>
+            )
+          }
+
           <form>
             <label htmlFor='aircraft'>Model</label>
             <select
@@ -72,13 +78,12 @@ export const Planes = (props: PlanesProps) => {
           }
         </div>
       </div>
-      <div className='planes'>
-        <>
+      <div className={`planes ${selectedPlane ? 'visible' : ''}`}>
+        <div>
 
           {filteredPlanes && (
             <>
               <h2>Possible candidates</h2>
-              <p>Highly experimental! Don&apos;t be surprised if things are wrong, for any feedback find me on FSE&apos;s Discord (Nordic-FSE)</p>
               <table id='aircraft-data'>
                 <thead>
                   <tr>
@@ -141,14 +146,15 @@ export const Planes = (props: PlanesProps) => {
               </table>
             </>
           )}
-        </>
-      </div>
-
-      <div className='finder-notes'>
-        <h2>Notes about fuel burn</h2>
-        <p>FSEconomy will check that you use <em>around the same amount of fuel as your aliased model, or more</em>. If you burn more you'll always be fine (e.g. you may had to do a go-around and burn more than expected. But not too little. </p>
-        <p>Check the GPH of your aliased plane, if your model burns less, try to burn as much as possible to get close to it.</p>
-        <p><a href="https://sites.google.com/site/fseoperationsguide/aircraft/fuel-usage-requirements">Fuel burn information on the FSE Manual</a></p>
+        </div>
+        <div className='finder-notes'>
+          <p className='note'>Highly experimental! Don&apos;t be surprised if things are wrong, for any feedback find me on FSE&apos;s Discord (Nordic-FSE)</p>
+          <h2>About fuel burn</h2>
+          <p>FSEconomy will check that you use <em>around the same amount of fuel as your aliased model, or more</em>.</p>
+          <p>If you burn more you'll always be fine, just try not to burn too little. </p>
+          <p>Check the GPH of your aliased plane, if your model burns less, try to burn as much as possible to get close to it.</p>
+          <p><a href="https://sites.google.com/site/fseoperationsguide/aircraft/fuel-usage-requirements">Fuel burn information on the FSE Manual</a></p>
+        </div>
       </div>
     </div>
   );

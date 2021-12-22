@@ -1,28 +1,54 @@
 .finder-wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 32px;
-  padding: 180px 32px 32px;
+  padding: $baseline;
 }
 
 .finder-search {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;  
+  h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+    em {
+      color: powderblue;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    background: dodgerblue;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: 0.2s ease all;
+
+    &:hover {
+      background: rgb(3, 115, 228);
+      color: white;
+    }
+  }
 }
 
 .planes {
-  grid-row-start: 2;
+  display: none;
+  // grid-row-start: 2;
+  @include card;
+
+  &.visible {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: $baseline;
+  }
+
+  .finder-notes {
+    grid-column-start: 2;
+    background: #f2f3f4;
+    border-radius: 8px;
+    padding: $baseline;
+  }
+
   .note {
     background-color: rgb(251, 216, 210);
     padding: 16px;
     border-radius: 4px;
   }
-}
-
-.finder-notes {
-  grid-row-start: 2;
-  background: #f2f3f4;
-  border-radius: 8px;
-  padding: 32px;
 }
