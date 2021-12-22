@@ -1,0 +1,39 @@
+.Modal {
+  @include card;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 96%;
+  max-width: 600px;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 0;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    button {
+      @include button;
+      height: 44px;
+    }
+  }
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: .7);
+}

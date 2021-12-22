@@ -67,13 +67,13 @@ export const Planes = (props: PlanesProps) => {
           </form>
           {
             searchType === 'fse' && (
-              <p><Link to='/sim'>Search for possible aliases on my sim plane instead</Link></p>
+              <p><Link to='/sim'>Search aliases for my sim plane</Link></p>
             )
           }
 
           {
             searchType === 'sim' && (
-              <p><Link to='/fse'>Search for possible aliases for my FSE plane instead</Link></p>
+              <p><Link to='/fse'>Search aliases for my FSE plane</Link></p>
             )
           }
         </div>

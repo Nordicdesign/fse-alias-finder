@@ -1,6 +1,7 @@
 .home-container {
   margin: 32px auto;
   max-width: 800px;
+  padding: 0 $baseline;
 }
 .home-intro-text {
   color: white;
@@ -17,7 +18,7 @@
   @media screen and (max-width: 600px) {
       display: block;
       height: auto;
-      min-height: 100vh;
+      // min-height: 100vh;
   }
 
   .home-fly-fse-plane,
@@ -26,6 +27,10 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
     min-height: 200px;
+    @media screen and (max-width: 600px) {
+      min-height: auto;
+      margin-bottom: $baseline;
+    }
 
     &:hover {
       background: white;
@@ -45,5 +50,20 @@
       font-weight: bold;
       font-style: normal;
     }
+  }
+}
+
+.what {
+  margin: 100px auto 0;
+  @include card;
+  max-width: 200px;
+  z-index: 10;
+  text-align: center;
+  padding: $baseline;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }

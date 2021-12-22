@@ -3,6 +3,7 @@
 }
 
 .finder-search {
+  text-align: center;
   h2 {
     color: white;
     text-align: center;
@@ -14,17 +15,7 @@
   }
 
   a {
-    color: white;
-    text-decoration: none;
-    background: dodgerblue;
-    border-radius: 4px;
-    padding: 8px 12px;
-    transition: 0.2s ease all;
-
-    &:hover {
-      background: rgb(3, 115, 228);
-      color: white;
-    }
+    @include button;
   }
 }
 
