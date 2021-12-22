@@ -1,3 +1,45 @@
-.planes {
+.finder-wrapper {
+  padding: $baseline;
+}
 
+.finder-search {
+  text-align: center;
+  h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+    em {
+      color: powderblue;
+    }
+  }
+
+  a {
+    @include button;
+  }
+}
+
+.planes {
+  display: none;
+  // grid-row-start: 2;
+  @include card;
+
+  &.visible {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: $baseline;
+  }
+
+  .finder-notes {
+    grid-column-start: 2;
+    background: #f2f3f4;
+    border-radius: 8px;
+    padding: $baseline;
+  }
+
+  .note {
+    background-color: rgb(251, 216, 210);
+    padding: 16px;
+    border-radius: 4px;
+  }
 }

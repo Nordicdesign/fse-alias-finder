@@ -2,8 +2,12 @@
 // generics
 @import './components/forms.scss';
 @import './components/tables.scss';
+@import './components/cards.scss';
+@import './components/buttons.scss';
+
 // components
 @import './components/Header.scss';
+@import './components/Modal.scss';
 
 // pages
 @import './pages/Planes.scss';
@@ -14,12 +18,27 @@ body {
   font-family: $font-stack;
   font-size: 16px;
   margin: 0;
+  background: #1c3432 url(../images/background.jpg) 0 0 no-repeat;
+  background-size: cover;
 
   @media screen and (max-widht: 480px) {
     font-size: 14px;
   }
 }
 
+body {
+  height: 100vh;
+}
+
 * {
   box-sizing: border-box;
+}
+
+a {
+  color: dodgerblue;
+  transition: 0.2s ease all;
+
+  &:hover {
+    color: blue;
+  }
 }

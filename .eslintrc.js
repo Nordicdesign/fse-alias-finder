@@ -3,15 +3,16 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ['plugin:react/recommended', 'standard'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 8,
-    sourceType: 'module'
-  },
-  plugins: ['react'],
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": [
+    "@typescript-eslint"
+  ],
   rules: {
     // https://eslint.org/docs/rules/array-bracket-spacing
     'array-bracket-spacing': ['error', 'never'],
@@ -27,7 +28,7 @@ module.exports = {
     'no-console': ['warn'],
     'no-debugger': ['warn'],
 
-    // Indent at 4 spaces
+    // Indent at 2 spaces
     indent: ['error', 2],
 
     // No trailing spaces in code

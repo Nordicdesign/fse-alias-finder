@@ -1,19 +1,19 @@
-// import React from 'react';
+import React, { useEffect } from 'react';
 import './assets/styles/app.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Search } from './components/Search';
-import { Home } from './components/Home';
+import { Search } from './pages/finder/Search';
+import { Home } from './pages/home/Home';
 
-function App() {
+function App () {
   return (
     <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/:type/:plane' element={<Search />} />
-    </Routes>
-  </BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/:type' element={<Search />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
