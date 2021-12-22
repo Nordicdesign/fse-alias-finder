@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Home = (props) => {
-  // eslint-disable-next-line react/prop-types
+export const Home = () => {
+  // eslint-disable-next-line
   // const { showPlanes, visible } = props;
   return (
     <>

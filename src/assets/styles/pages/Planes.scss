@@ -1,9 +1,28 @@
-.planes {
+.finder-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 32px;
   padding: 180px 32px 32px;
+}
 
+.finder-search {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;  
+}
+
+.planes {
+  grid-row-start: 2;
   .note {
     background-color: rgb(251, 216, 210);
     padding: 16px;
     border-radius: 4px;
   }
+}
+
+.finder-notes {
+  grid-row-start: 2;
+  background: #f2f3f4;
+  border-radius: 8px;
+  padding: 32px;
 }
