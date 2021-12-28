@@ -1,0 +1,11 @@
+/* TEAM */      
+Your title: Alex Lillo     
+Site: nordic-design.net                     
+Twitter: Nordic                          
+Location: St. Albans, UK
+
+/* SITE */                           
+Last update: 2021/12/28                            
+Standards: HTML5, CSS3, JS                            
+Components: React                            
+Software: VS Code
