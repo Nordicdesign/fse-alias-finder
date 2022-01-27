@@ -1,0 +1,14 @@
+.search-manual,
+.search-model {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  .search-formItem {
+    padding-right: $baseline;
+    
+    label {
+      display: block;
+    }
+  }  
+}

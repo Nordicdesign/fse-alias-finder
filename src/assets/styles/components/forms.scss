@@ -9,6 +9,15 @@ label {
 
 select {
   font-size: 1rem;
-  // padding: math.div($baseline,2);
-  padding: 8px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: $baseline/2 $baseline;
+}
+
+input {
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: $baseline/2 $baseline;
 }
