@@ -1,34 +1,39 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../../app/data/aircraft.json';
 import { filterManualPlanes } from '../../app/utils/filterPlanes';
 import { Plane, calcTotalFuel } from '../../app/utils/calculateTotalFuel';
 import { planeDataType } from '../../types';
-// import { Link } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
 
 interface PlanesProps {
   manualData: planeDataType,
-  visible: boolean
 }
 
 export const PlanesManual = (props: PlanesProps) => {
-  const { manualData, visible } = props;
+  const { manualData } = props;
+
   const [filteredPlanes, setFilteredPlanes] = useState<Plane[] | undefined>();
+  const [showManualData, setShowManualData] = useState<boolean>(false);
 
   useEffect(() => {
     setFilteredPlanes(filterManualPlanes({data, manualData}));
   }, [manualData]);
 
-  // <div className={`planes ${selectedPlane ? 'visible' : ''}`}>
+  useEffect(() => {
+    if (
+      manualData.cruiseSpeed !== 0 ||
+      manualData.fuelConsumption !== 0 ||
+      manualData.mtow !== 0
+    ) {
+      setShowManualData(true);
+    }
+  }, [manualData]);
 
   return (
     <div className='finder-wrapper'>
-      <div className='finder-search'>
-      </div>
-      <div className={`planes ${visible ? 'visible': ''}`}>
+      <div className='planes visible'>
         <div>
 
-          {filteredPlanes && (
+          {filteredPlanes && showManualData && (
             <>
               <h2>Possible candidates</h2>
               <table id='aircraft-data'>

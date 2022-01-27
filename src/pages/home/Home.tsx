@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { To, useNavigate } from "react-router-dom";
 import Modal from 'react-modal';
 import { Search } from '../finder/Search';
@@ -32,6 +32,20 @@ export const Home = () => {
     setIsOpen(false);
   }
 
+  // useEffect(() => {
+  //   console.log(manualData);
+
+  //   if (
+  //     manualData.cruiseSpeed && isNaN(manualData.cruiseSpeed) &&
+  //     manualData.fuelConsumption && isNaN(manualData.fuelConsumption) &&
+  //     manualData.mtow && isNaN(manualData.mtow)
+  //   ) {
+  //     setShowManualData(true);
+  //   } else {
+  //     setShowManualData(false);
+  //   }
+  // }, [manualData]);
+
   return (
     <>
       <div className='home-container'>
@@ -43,8 +57,9 @@ export const Home = () => {
           manualData={manualData}
           setManualData={setManualData}
         />
-        <Planes selectedPlane={selectedPlane} visible={searchType === 'model-fse'} />
-        <PlanesManual manualData={manualData} visible={searchType === 'manual'} />
+        {searchType === 'model-fse' && selectedPlane && <Planes selectedPlane={selectedPlane} />}
+        {searchType === 'manual' && <PlanesManual manualData={manualData} />}
+
         <div className='what' onClick={openModal}>
           <p>What is this about? 🤷</p>
         </div>

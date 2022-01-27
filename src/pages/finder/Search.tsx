@@ -1,6 +1,4 @@
-import React, { InputHTMLAttributes, SyntheticEvent, useEffect, useRef, useState } from 'react';
-// import { useParams } from 'react-router-dom';
-// import { Planes } from './Planes';
+import React, { useRef } from 'react';
 import data from '../../app/data/aircraft.json';
 import { planeDataType } from '../../types';
 
@@ -18,6 +16,7 @@ interface SearchProps {
   manualData: planeDataType;
   setManualData: React.Dispatch<React.SetStateAction<planeDataType>>;
 }
+
 export const Search = (props: SearchProps) => {
   const { selectedPlane, setSelectedPlane, searchType, setSearchType, setManualData } = props;
   const selectedAircraft = useRef<HTMLSelectElement>(null);
@@ -50,7 +49,15 @@ export const Search = (props: SearchProps) => {
 
   return (
     <div className='search'>
-      <h2 className='home-intro-text'>What are you looking to alias?</h2>
+      <div className='search--header'>
+        <h2 className='home-intro-text'>What are you looking to alias?</h2>
+        <div className='search-model-toggle'>
+          <label className="switch">
+            <input type="checkbox" />
+            <span className='slider round'></span>Manual search
+          </label>
+        </div>
+      </div>
 
       {
         searchType === 'model-fse' ? (
@@ -74,9 +81,6 @@ export const Search = (props: SearchProps) => {
                 </select>
               </div>
 
-              {/* <div className='search-model-toggle'>
-                <p>Toggle</p>
-              </div> */}
               <button className='btn' onClick={searchManually}>Manual search</button>
             </div>
           </form>

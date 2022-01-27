@@ -1,12 +1,8 @@
 .home-container {
   margin: 32px auto;
-  max-width: 800px;
+  width: 96%;
+  max-width: 1800px;
   padding: 0 $baseline;
-}
-.home-intro-text {
-  color: white;
-  text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .home {
@@ -18,7 +14,6 @@
   @media screen and (max-width: 600px) {
       display: block;
       height: auto;
-      // min-height: 100vh;
   }
 
   .home-fly-fse-plane,

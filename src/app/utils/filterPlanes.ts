@@ -19,11 +19,6 @@ interface FilterManualProps {
 export const filterFSEPlanes = (props:FilterProps): Plane[] => {
   const { data, selectedPlane } = props;
   const selectedData = data.data.filter((plane: Plane) => plane.makeModel === selectedPlane);
-  // console.log('selected', selectedData);
-  // same fuel type - Probably not needed
-  // let result = data.data.filter(
-  //   plane => plane.fuelType === selectedData[0].fuelType
-  // );
 
   // Remove itself
   let result = data.data.filter((plane:Plane) => plane.makeModel !== selectedPlane);
@@ -54,12 +49,6 @@ export const filterFSEPlanes = (props:FilterProps): Plane[] => {
 export const filterManualPlanes = (props:FilterManualProps): Plane[] => {
   const { data, manualData } = props;
   const { cruiseSpeed, fuelConsumption, mtow } = manualData;
-  // const selectedData = data.data.filter((plane: Plane) => plane.makeModel === selectedPlane);
-  // console.log('selected', selectedData);
-  // same fuel type - Probably not needed
-  // let result = data.data.filter(
-  //   plane => plane.fuelType === selectedData[0].fuelType
-  // );
 
   // Remove itself
   let result = data.data;
@@ -101,11 +90,6 @@ export const filterManualPlanes = (props:FilterManualProps): Plane[] => {
 export const filterSimPlane = (props:FilterProps): Plane[] => {
   const { data, selectedPlane } = props;
   const selectedData = data.data.filter((plane: Plane) => plane.makeModel === selectedPlane);
-  // console.log('selected', selectedData);
-  // same fuel type - Probably not needed
-  // let result = data.data.filter(
-  //   plane => plane.fuelType === selectedData[0].fuelType
-  // );
 
   // Remove itself
   let result = data.data.filter((plane:Plane) => plane.makeModel !== selectedPlane);

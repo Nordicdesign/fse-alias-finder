@@ -2,41 +2,26 @@ import React, { useState, useEffect } from 'react';
 import data from '../../app/data/aircraft.json';
 import { filterFSEPlanes } from '../../app/utils/filterPlanes';
 import { Plane, calcTotalFuel } from '../../app/utils/calculateTotalFuel';
-// import { Link } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
 
 interface PlanesProps {
-  // searchType: string;
-  selectedPlane: string | boolean;
-  visible: boolean;
+  selectedPlane: string | boolean
 }
 
 export const Planes = (props: PlanesProps) => {
-
-  const { selectedPlane, visible } = props;
-
+  const { selectedPlane } = props;
   const [filteredPlanes, setFilteredPlanes] = useState<Plane[] | undefined>();
-  // const [manualData, setManualData] = useState({});
 
   useEffect(() => {
     if (typeof(selectedPlane) === 'string') {
       setFilteredPlanes(filterFSEPlanes({data, selectedPlane}));
-      // if (searchType === 'fse') {
-      //   setFilteredPlanes(filterFSEPlanes({data, selectedPlane}));
-      // }
-      // if (searchType === 'sim') {
-      //   setFilteredPlanes(filterSimPlane({data, selectedPlane}));
-      // }
     }
   }, [selectedPlane]);
-
-
 
   return (
     <div className='finder-wrapper'>
       <div className='finder-search'>
       </div>
-      <div className={`planes ${visible ? 'visible' : ''}`}>
+      <div className='planes visible'>
         <div>
 
           {filteredPlanes && (
@@ -58,7 +43,6 @@ export const Planes = (props: PlanesProps) => {
                   {data.data
                     .filter(plane => plane.makeModel === selectedPlane)
                     .map((plane, key) => {
-                    // console.log(plane);
                       const totalFuel = calcTotalFuel(plane);
 
                       return (

@@ -1,22 +1,5 @@
 .finder-wrapper {
-  padding: $baseline;
-}
-
-.finder-search {
-  text-align: center;
-  h2 {
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-
-    em {
-      color: powderblue;
-    }
-  }
-
-  a {
-    @include button;
-  }
+  padding: $baseline 0;
 }
 
 .planes {
