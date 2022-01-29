@@ -1,13 +1,14 @@
 header {
-  // position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // align-items: baseline;
   height: 80px;
   padding: 16px;
-  // z-index: 10;
   width: 100%;
+
+  @media screen and (max-width: $small) {
+    display: block;
+  }
 
   a {
     text-decoration: none;
@@ -28,16 +29,27 @@ header {
     font-size: 2rem;
     line-height: 1;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+
+    @media screen and (max-width: $xsmall) {
+      font-size: 1.5rem;
+    }
     
     em {
       font-size: 3rem;
-      // display: block;
+      @media screen and (max-width: $xsmall) {
+        font-size: 2rem;
+      }
     }
   }
   p {
     font-size: .9rem;
     color: white;
     margin-left: auto;
+
+    @media screen and (max-width: $small) {
+      margin: 0;
+      text-align: center;
+    }
   }
   sup {
     font-size: .6rem;

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { To, useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+// import { To, useNavigate } from "react-router-dom";
 import Modal from 'react-modal';
 import { Search } from '../finder/Search';
 import { Planes } from '../finder/Planes';
@@ -15,10 +15,6 @@ const initialManual = {
 };
 
 export const Home = () => {
-  // const navigate = useNavigate();
-  // const findStuff = (where: To) => {
-  //   navigate(where);
-  // };
   const [selectedPlane, setSelectedPlane] = useState<string | boolean>(false);
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
   const [manualData, setManualData] = useState<planeDataType>(initialManual);
@@ -32,19 +28,7 @@ export const Home = () => {
     setIsOpen(false);
   }
 
-  // useEffect(() => {
-  //   console.log(manualData);
 
-  //   if (
-  //     manualData.cruiseSpeed && isNaN(manualData.cruiseSpeed) &&
-  //     manualData.fuelConsumption && isNaN(manualData.fuelConsumption) &&
-  //     manualData.mtow && isNaN(manualData.mtow)
-  //   ) {
-  //     setShowManualData(true);
-  //   } else {
-  //     setShowManualData(false);
-  //   }
-  // }, [manualData]);
 
   return (
     <>

@@ -19,7 +19,7 @@ body {
   font-family: $font-stack;
   font-size: 16px;
   margin: 0;
-  background: #1c3432 url(../images/background.jpg) 0 0 no-repeat;
+  background: #1c3432 url(../images/background.jpg) 0 0 no-repeat fixed;
   background-size: cover;
 
   @media screen and (max-widht: 480px) {

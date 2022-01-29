@@ -1,6 +1,10 @@
 @import '../variables.scss';
 form {
   margin: 0 0 $baseline*3;
+
+  @media screen and (max-width: $medium) {
+    margin-bottom: 0;
+  }
 }
 label {
     display: block;
@@ -13,6 +17,11 @@ select {
   border-radius: 4px;
   border: 1px solid #ccc;
   padding: $baseline/2 $baseline;
+
+  @media screen and (max-width: $small) {
+    font-size: .8rem;
+    width: 100%;
+  }
 }
 
 input {
@@ -20,18 +29,32 @@ input {
   border-radius: 4px;
   border: 1px solid #ccc;
   padding: $baseline/2 $baseline;
+
+  @media screen and (max-width: $medium) {
+    width: 100%;
+  }
 }
 
 .search-model-toggle {
   margin-top: $baseline * 1.5;
+  @media screen and (max-width: $medium) {
+    margin: 8px 0 $baseline;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 8px;
+  }
 }
 
 /* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
-  height: 34px;
-  padding: 6px 0 0 60px;
+  height: 30px;
+  padding: 4px 0 0 60px;
+
+  @media screen and (max-width: $small) {
+    font-weight: normal;
+    font-size: .9rem;
+  }
 }
 
 /* Hide default HTML checkbox */
@@ -58,9 +81,9 @@ input {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 22px;
+  width: 22px;
+  left: 6px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
