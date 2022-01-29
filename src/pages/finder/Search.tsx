@@ -19,6 +19,7 @@ interface SearchProps {
 
 export const Search = (props: SearchProps) => {
   const { selectedPlane, setSelectedPlane, searchType, setSearchType, setManualData } = props;
+
   const selectedAircraft = useRef<HTMLSelectElement>(null);
   const cruiseSpeed = useRef<HTMLInputElement>(null);
   const fuelConsumption = useRef<HTMLInputElement>(null);
@@ -47,16 +48,29 @@ export const Search = (props: SearchProps) => {
     });
   };
 
+  const changeSearchType =() => searchType === 'manual' ? setSearchType('model-fse') : setSearchType('manual');
+
+  const SearchTypeToggle = () => {
+    return (
+      <div className='search-model-toggle'>
+        <label className="switch">
+          <input
+            type="checkbox"
+            name='searchType'
+            checked={ searchType === 'manual' ? true : false }
+            onChange={changeSearchType}
+          />
+          <span className='slider round'></span>Manual search
+        </label>
+      </div>
+    );
+  };
+
   return (
     <div className='search'>
       <div className='search--header'>
         <h2 className='home-intro-text'>What are you looking to alias?</h2>
-        <div className='search-model-toggle'>
-          <label className="switch">
-            <input type="checkbox" />
-            <span className='slider round'></span>Manual search
-          </label>
-        </div>
+        <SearchTypeToggle />
       </div>
 
       {
@@ -80,8 +94,6 @@ export const Search = (props: SearchProps) => {
                   })}
                 </select>
               </div>
-
-              <button className='btn' onClick={searchManually}>Manual search</button>
             </div>
           </form>
         ) : null
@@ -102,7 +114,6 @@ export const Search = (props: SearchProps) => {
                 <label htmlFor='mtow'>MTOW (Kg)</label>
                 <input type='number' name='mtow' ref={mtow} placeholder='In Kg' onChange={() => manualPlaneData()} />
               </div>
-              <button className='btn' onClick={searchModel}>Plane search</button>
             </div>
           </form>
         ) : null
