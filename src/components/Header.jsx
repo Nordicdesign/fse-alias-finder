@@ -9,7 +9,7 @@ export const Header = () => {
           <em>FSE</em> Alias Finder <sup>Alpha</sup>
         </Link>
       </h1>
-      <p>Data last updated: 25/11/2021</p>
+      <p>Data last updated: 30/01/2022</p>
     </header>
   );
 };
