@@ -1,30 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import data from '../../app/data/aircraft.json';
-import { filterFSEPlanes } from '../../app/utils/filterPlanes';
+import { filterManualPlanes } from '../../app/utils/filterPlanes';
 import { Plane, calcTotalFuel } from '../../app/utils/calculateTotalFuel';
+import { planeDataType } from '../../types';
 
 interface PlanesProps {
-  selectedPlane: string | boolean
+  manualData: planeDataType,
 }
 
-export const Planes = (props: PlanesProps) => {
-  const { selectedPlane } = props;
+export const PlanesManual = (props: PlanesProps) => {
+  const { manualData } = props;
+
   const [filteredPlanes, setFilteredPlanes] = useState<Plane[] | undefined>();
+  const [showManualData, setShowManualData] = useState<boolean>(false);
 
   useEffect(() => {
-    if (typeof(selectedPlane) === 'string') {
-      setFilteredPlanes(filterFSEPlanes({data, selectedPlane}));
+    setFilteredPlanes(filterManualPlanes({data, manualData}));
+  }, [manualData]);
+
+  useEffect(() => {
+    if (
+      manualData.cruiseSpeed !== 0 ||
+      manualData.fuelConsumption !== 0 ||
+      manualData.mtow !== 0
+    ) {
+      setShowManualData(true);
     }
-  }, [selectedPlane]);
+  }, [manualData]);
 
   return (
     <div className='finder-wrapper'>
-      <div className='finder-search'>
-      </div>
       <div className='planes visible'>
         <div>
 
-          {filteredPlanes && (
+          {filteredPlanes && showManualData && (
             <>
               <h2>Possible candidates</h2>
               <table id='aircraft-data'>
@@ -40,36 +49,6 @@ export const Planes = (props: PlanesProps) => {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.data
-                    .filter(plane => plane.makeModel === selectedPlane)
-                    .map((plane, key) => {
-                      const totalFuel = calcTotalFuel(plane);
-
-                      return (
-                        <>
-                          <tr key='selected'>
-                            <td colSpan={7} className='separator'>
-                          Selected
-                            </td>
-                          </tr>
-                          <tr key={key + 'asdf'}>
-                            <td>{plane.makeModel}</td>
-                            <td>{plane.seats}</td>
-                            <td>{plane.mtow}</td>
-                            <td>{plane.cruise}</td>
-                            <td>{plane.fuelType}</td>
-                            <td>{totalFuel}</td>
-                            <td>{plane.gph}</td>
-                          </tr>
-                          <tr key='matches'>
-                            <td colSpan={7} className='separator'>
-                          Possible matches
-                            </td>
-                          </tr>
-                        </>
-                      );
-                    })}
-
                   {filteredPlanes.map((plane, key) => {
                     const totalFuel = calcTotalFuel(plane);
                     return (

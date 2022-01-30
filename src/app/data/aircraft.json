@@ -155,7 +155,7 @@
       "basePrice": "$526,500.00"
     },
     {
-      "makeModel": "Airbus A320 * **",
+      "makeModel": "Airbus A320",
       "additonalCrew": 12,
       "seats": 150,
       "cruise": 454,
@@ -177,7 +177,7 @@
       "basePrice": "$0.00"
     },
     {
-      "makeModel": "Airbus A320 (MSFS) * **",
+      "makeModel": "Airbus A320 (MSFS)",
       "additonalCrew": 12,
       "seats": 150,
       "cruise": 450,
@@ -199,7 +199,7 @@
       "basePrice": "$0.00"
     },
     {
-      "makeModel": "Airbus A321 * **",
+      "makeModel": "Airbus A321",
       "additonalCrew": 12,
       "seats": 185,
       "cruise": 477,
@@ -287,7 +287,7 @@
       "basePrice": "$31,800.00"
     },
     {
-      "makeModel": "Airspeed AS-57 Ambassador * **",
+      "makeModel": "Airspeed AS-57 Ambassador",
       "additonalCrew": 4,
       "seats": 47,
       "cruise": 260,
@@ -309,7 +309,7 @@
       "basePrice": "$3,220,500.00"
     },
     {
-      "makeModel": "Alenia C-27J Spartan * **",
+      "makeModel": "Alenia C-27J Spartan",
       "additonalCrew": 4,
       "seats": 50,
       "cruise": 300,
@@ -331,7 +331,7 @@
       "basePrice": "$3,928,500.00"
     },
     {
-      "makeModel": "Alenia C-27J Spartan (IRIS) * **",
+      "makeModel": "Alenia C-27J Spartan (IRIS)",
       "additonalCrew": 4,
       "seats": 50,
       "cruise": 300,
@@ -419,7 +419,7 @@
       "basePrice": "$297,000.00"
     },
     {
-      "makeModel": "Antonov An-24 * **",
+      "makeModel": "Antonov An-24",
       "additonalCrew": 4,
       "seats": 50,
       "cruise": 260,
@@ -441,7 +441,7 @@
       "basePrice": "$3,303,750.00"
     },
     {
-      "makeModel": "Antonov An-26 Curl * **",
+      "makeModel": "Antonov An-26 Curl",
       "additonalCrew": 3,
       "seats": 42,
       "cruise": 237,
@@ -485,7 +485,7 @@
       "basePrice": "$828,600.00"
     },
     {
-      "makeModel": "Antonov An-32 * **",
+      "makeModel": "Antonov An-32",
       "additonalCrew": 4,
       "seats": 53,
       "cruise": 300,
@@ -507,7 +507,7 @@
       "basePrice": "$4,293,000.00"
     },
     {
-      "makeModel": "ATR 42-500 * **",
+      "makeModel": "ATR 42-500",
       "additonalCrew": 3,
       "seats": 42,
       "cruise": 300,
@@ -529,7 +529,7 @@
       "basePrice": "$3,364,500.00"
     },
     {
-      "makeModel": "ATR 72-500 * **",
+      "makeModel": "ATR 72-500",
       "additonalCrew": 6,
       "seats": 70,
       "cruise": 250,
@@ -661,7 +661,7 @@
       "basePrice": "$232,800.00"
     },
     {
-      "makeModel": "Avro Lancaster * **",
+      "makeModel": "Avro Lancaster",
       "additonalCrew": 7,
       "seats": 10,
       "cruise": 180,
@@ -705,7 +705,7 @@
       "basePrice": "$68,250.00"
     },
     {
-      "makeModel": "BAe 146-100 (Avro RJ70) * **",
+      "makeModel": "BAe 146-100 (Avro RJ70)",
       "additonalCrew": 7,
       "seats": 84,
       "cruise": 420,
@@ -771,7 +771,7 @@
       "basePrice": "$1,818,000.00"
     },
     {
-      "makeModel": "Basler BT-67 * **",
+      "makeModel": "Basler BT-67",
       "additonalCrew": 3,
       "seats": 37,
       "cruise": 205,
@@ -1651,7 +1651,7 @@
       "basePrice": "$0.00"
     },
     {
-      "makeModel": "Boeing 377 * **",
+      "makeModel": "Boeing 377",
       "additonalCrew": 6,
       "seats": 75,
       "cruise": 300,
@@ -1673,7 +1673,7 @@
       "basePrice": "$5,910,000.00"
     },
     {
-      "makeModel": "Boeing 727-100/200 * **",
+      "makeModel": "Boeing 727-100/200",
       "additonalCrew": 12,
       "seats": 135,
       "cruise": 495,
@@ -1695,7 +1695,7 @@
       "basePrice": "$0.00"
     },
     {
-      "makeModel": "Boeing 737-800 * **",
+      "makeModel": "Boeing 737-800",
       "additonalCrew": 12,
       "seats": 162,
       "cruise": 435,
@@ -1717,7 +1717,7 @@
       "basePrice": "$0.00"
     },
     {
-      "makeModel": "Boeing 747-400 * **",
+      "makeModel": "Boeing 747-400",
       "additonalCrew": 19,
       "seats": 417,
       "cruise": 504,
@@ -1761,7 +1761,7 @@
       "basePrice": "$2,250,000.00"
     },
     {
-      "makeModel": "Boeing B314 Clipper * **",
+      "makeModel": "Boeing B314 Clipper",
       "additonalCrew": 7,
       "seats": 76,
       "cruise": 157,
@@ -1827,7 +1827,7 @@
       "basePrice": "$52,200.00"
     },
     {
-      "makeModel": "Boeing Vertol CH-46D Sea Knight (BV107) * **",
+      "makeModel": "Boeing Vertol CH-46D Sea Knight (BV107)",
       "additonalCrew": 2,
       "seats": 27,
       "cruise": 130,
@@ -1849,7 +1849,7 @@
       "basePrice": "$867,000.00"
     },
     {
-      "makeModel": "Boeing Vertol CH-47 Chinook * **",
+      "makeModel": "Boeing Vertol CH-47 Chinook",
       "additonalCrew": 4,
       "seats": 46,
       "cruise": 138,
@@ -1871,7 +1871,7 @@
       "basePrice": "$1,699,855.00"
     },
     {
-      "makeModel": "Bombardier Challenger 300 * **",
+      "makeModel": "Bombardier Challenger 300",
       "additonalCrew": 1,
       "seats": 10,
       "cruise": 458,
@@ -1893,7 +1893,29 @@
       "basePrice": "$898,350.00"
     },
     {
-      "makeModel": "Bombardier CL-415 * **",
+      "makeModel": "Bombardier Challenger 650",
+      "additonalCrew": 1,
+      "seats": 13,
+      "cruise": 459,
+      "ext1": 0,
+      "leftTip": 132,
+      "leftAux": 209,
+      "leftMain": 730,
+      "center": 787,
+      "center2": 245,
+      "center3": 107,
+      "rightMain": 730,
+      "rightAux": 0,
+      "rightTip": 132,
+      "ext2": 0,
+      "gph": 330,
+      "fuelType": "JetA",
+      "mtow": 21104,
+      "emptyWeight": 12556,
+      "basePrice": "$1,345,290.00"
+    },
+    {
+      "makeModel": "Bombardier CL-415",
       "additonalCrew": 1,
       "seats": 11,
       "cruise": 205,
@@ -1915,7 +1937,7 @@
       "basePrice": "$1,029,646.00"
     },
     {
-      "makeModel": "Bombardier CRJ-200ER * **",
+      "makeModel": "Bombardier CRJ-200ER",
       "additonalCrew": 4,
       "seats": 52,
       "cruise": 437,
@@ -1937,7 +1959,7 @@
       "basePrice": "$6,784,163.00"
     },
     {
-      "makeModel": "Bombardier CRJ700-ER * **",
+      "makeModel": "Bombardier CRJ700-ER",
       "additonalCrew": 6,
       "seats": 74,
       "cruise": 455,
@@ -1959,7 +1981,7 @@
       "basePrice": "$9,285,000.00"
     },
     {
-      "makeModel": "Bombardier Dash-8 Q400 * **",
+      "makeModel": "Bombardier Dash-8 Q400",
       "additonalCrew": 7,
       "seats": 78,
       "cruise": 380,
@@ -2003,7 +2025,7 @@
       "basePrice": "$1,779,402.00"
     },
     {
-      "makeModel": "Bristol Britannia 300 * **",
+      "makeModel": "Bristol Britannia 300",
       "additonalCrew": 9,
       "seats": 105,
       "cruise": 330,
@@ -2025,7 +2047,7 @@
       "basePrice": "$9,075,000.00"
     },
     {
-      "makeModel": "Bristol Mark 32 Superfreighter * **",
+      "makeModel": "Bristol Mark 32 Superfreighter",
       "additonalCrew": 1,
       "seats": 20,
       "cruise": 190,
@@ -2113,7 +2135,7 @@
       "basePrice": "$50,400.00"
     },
     {
-      "makeModel": "CASA CN235 * **",
+      "makeModel": "CASA CN235",
       "additonalCrew": 4,
       "seats": 47,
       "cruise": 245,
@@ -2641,7 +2663,7 @@
       "basePrice": "$732,000.00"
     },
     {
-      "makeModel": "Cessna Citation Longitude * **",
+      "makeModel": "Cessna Citation Longitude",
       "additonalCrew": 1,
       "seats": 10,
       "cruise": 465,
@@ -2663,7 +2685,7 @@
       "basePrice": "$1,031,895.00"
     },
     {
-      "makeModel": "Cessna Citation X * **",
+      "makeModel": "Cessna Citation X",
       "additonalCrew": 1,
       "seats": 12,
       "cruise": 450,
@@ -2971,7 +2993,7 @@
       "basePrice": "$138,450.00"
     },
     {
-      "makeModel": "Consolidated C-87 Liberator Express * **",
+      "makeModel": "Consolidated C-87 Liberator Express",
       "additonalCrew": 2,
       "seats": 27,
       "cruise": 170,
@@ -3015,7 +3037,7 @@
       "basePrice": "$852,500.00"
     },
     {
-      "makeModel": "Convair 340/440 * **",
+      "makeModel": "Convair 340/440",
       "additonalCrew": 4,
       "seats": 52,
       "cruise": 230,
@@ -3037,7 +3059,7 @@
       "basePrice": "$3,114,750.00"
     },
     {
-      "makeModel": "Convair 580 * **",
+      "makeModel": "Convair 580",
       "additonalCrew": 5,
       "seats": 56,
       "cruise": 282,
@@ -3081,7 +3103,7 @@
       "basePrice": "$59,430.00"
     },
     {
-      "makeModel": "Curtiss C46 * **",
+      "makeModel": "Curtiss C46",
       "additonalCrew": 4,
       "seats": 52,
       "cruise": 150,
@@ -3147,7 +3169,7 @@
       "basePrice": "$77,400.00"
     },
     {
-      "makeModel": "Dassault Falcon 50 * **",
+      "makeModel": "Dassault Falcon 50",
       "additonalCrew": 0,
       "seats": 10,
       "cruise": 450,
@@ -3169,7 +3191,7 @@
       "basePrice": "$895,350.00"
     },
     {
-      "makeModel": "Dassault Falcon 7X * **",
+      "makeModel": "Dassault Falcon 7X",
       "additonalCrew": 1,
       "seats": 16,
       "cruise": 480,
@@ -3235,7 +3257,7 @@
       "basePrice": "$38,115.00"
     },
     {
-      "makeModel": "DeHavilland Dash 7 * **",
+      "makeModel": "DeHavilland Dash 7",
       "additonalCrew": 4,
       "seats": 54,
       "cruise": 230,
@@ -3257,7 +3279,7 @@
       "basePrice": "$3,738,000.00"
     },
     {
-      "makeModel": "DeHavilland Dash 8 100/200 * **",
+      "makeModel": "DeHavilland Dash 8 100/200",
       "additonalCrew": 3,
       "seats": 39,
       "cruise": 260,
@@ -3279,7 +3301,7 @@
       "basePrice": "$2,586,000.00"
     },
     {
-      "makeModel": "DeHavilland Dash 8 Q300 * **",
+      "makeModel": "DeHavilland Dash 8 Q300",
       "additonalCrew": 4,
       "seats": 55,
       "cruise": 285,
@@ -3565,7 +3587,7 @@
       "basePrice": "$426,060.00"
     },
     {
-      "makeModel": "DeHavilland DHC-4 Caribou * **",
+      "makeModel": "DeHavilland DHC-4 Caribou",
       "additonalCrew": 2,
       "seats": 32,
       "cruise": 158,
@@ -3587,7 +3609,7 @@
       "basePrice": "$1,152,000.00"
     },
     {
-      "makeModel": "DeHavilland DHC-5 Buffalo * **",
+      "makeModel": "DeHavilland DHC-5 Buffalo",
       "additonalCrew": 4,
       "seats": 46,
       "cruise": 240,
@@ -3763,7 +3785,7 @@
       "basePrice": "$1,270,800.00"
     },
     {
-      "makeModel": "Dornier 328 * **",
+      "makeModel": "Dornier 328",
       "additonalCrew": 2,
       "seats": 33,
       "cruise": 265,
@@ -3873,7 +3895,7 @@
       "basePrice": "$322,500.00"
     },
     {
-      "makeModel": "Douglas C117D * **",
+      "makeModel": "Douglas C117D",
       "additonalCrew": 2,
       "seats": 32,
       "cruise": 170,
@@ -3939,7 +3961,7 @@
       "basePrice": "$595,500.00"
     },
     {
-      "makeModel": "Douglas DC-3 * **",
+      "makeModel": "Douglas DC-3",
       "additonalCrew": 2,
       "seats": 28,
       "cruise": 140,
@@ -3961,7 +3983,7 @@
       "basePrice": "$1,010,250.00"
     },
     {
-      "makeModel": "Douglas DC-4 * **",
+      "makeModel": "Douglas DC-4",
       "additonalCrew": 8,
       "seats": 86,
       "cruise": 270,
@@ -3983,7 +4005,7 @@
       "basePrice": "$6,501,750.00"
     },
     {
-      "makeModel": "Douglas DC-6 * **",
+      "makeModel": "Douglas DC-6",
       "additonalCrew": 5,
       "seats": 56,
       "cruise": 290,
@@ -4005,7 +4027,7 @@
       "basePrice": "$4,210,500.00"
     },
     {
-      "makeModel": "Douglas DC-6B * **",
+      "makeModel": "Douglas DC-6B",
       "additonalCrew": 9,
       "seats": 97,
       "cruise": 290,
@@ -4027,7 +4049,7 @@
       "basePrice": "$7,657,050.00"
     },
     {
-      "makeModel": "Douglas DC-6B (PMDG) * **",
+      "makeModel": "Douglas DC-6B (PMDG)",
       "additonalCrew": 8,
       "seats": 91,
       "cruise": 225,
@@ -4049,7 +4071,7 @@
       "basePrice": "$5,503,500.00"
     },
     {
-      "makeModel": "Douglas DC-7B * **",
+      "makeModel": "Douglas DC-7B",
       "additonalCrew": 8,
       "seats": 95,
       "cruise": 300,
@@ -4071,7 +4093,7 @@
       "basePrice": "$7,827,000.00"
     },
     {
-      "makeModel": "Douglas DC-7C * **",
+      "makeModel": "Douglas DC-7C",
       "additonalCrew": 9,
       "seats": 105,
       "cruise": 280,
@@ -4093,7 +4115,7 @@
       "basePrice": "$8,674,500.00"
     },
     {
-      "makeModel": "Douglas DC-8 (10-40) * **",
+      "makeModel": "Douglas DC-8 (10-40)",
       "additonalCrew": 6,
       "seats": 140,
       "cruise": 480,
@@ -4181,7 +4203,7 @@
       "basePrice": "$2,133,000.00"
     },
     {
-      "makeModel": "Embraer ERJ-135LR * **",
+      "makeModel": "Embraer ERJ-135LR",
       "additonalCrew": 3,
       "seats": 39,
       "cruise": 455,
@@ -4203,7 +4225,7 @@
       "basePrice": "$4,865,631.00"
     },
     {
-      "makeModel": "Embraer ERJ-145LR * **",
+      "makeModel": "Embraer ERJ-145LR",
       "additonalCrew": 4,
       "seats": 52,
       "cruise": 435,
@@ -4225,7 +4247,7 @@
       "basePrice": "$6,336,653.00"
     },
     {
-      "makeModel": "Embraer Legacy 600 * **",
+      "makeModel": "Embraer Legacy 600",
       "additonalCrew": 1,
       "seats": 15,
       "cruise": 450,
@@ -4467,7 +4489,7 @@
       "basePrice": "$164,230.00"
     },
     {
-      "makeModel": "Fairchild C-119 (AH) * **",
+      "makeModel": "Fairchild C-119 (AH)",
       "additonalCrew": 6,
       "seats": 67,
       "cruise": 188,
@@ -4489,7 +4511,7 @@
       "basePrice": "$3,142,509.00"
     },
     {
-      "makeModel": "Fairchild C119 * **",
+      "makeModel": "Fairchild C119",
       "additonalCrew": 6,
       "seats": 67,
       "cruise": 200,
@@ -4511,7 +4533,7 @@
       "basePrice": "$3,684,000.00"
     },
     {
-      "makeModel": "Fairchild C123 * **",
+      "makeModel": "Fairchild C123",
       "additonalCrew": 2,
       "seats": 32,
       "cruise": 180,
@@ -4577,7 +4599,7 @@
       "basePrice": "$52,350.00"
     },
     {
-      "makeModel": "Fokker 50 * **",
+      "makeModel": "Fokker 50",
       "additonalCrew": 5,
       "seats": 58,
       "cruise": 285,
@@ -4599,7 +4621,7 @@
       "basePrice": "$4,581,000.00"
     },
     {
-      "makeModel": "Fokker F27-500 Friendship * **",
+      "makeModel": "Fokker F27-500 Friendship",
       "additonalCrew": 5,
       "seats": 57,
       "cruise": 280,
@@ -4907,7 +4929,7 @@
       "basePrice": "$568,800.00"
     },
     {
-      "makeModel": "Hawker 850XP * **",
+      "makeModel": "Hawker 850XP",
       "additonalCrew": 0,
       "seats": 9,
       "cruise": 465,
@@ -4929,7 +4951,7 @@
       "basePrice": "$864,000.00"
     },
     {
-      "makeModel": "Hawker Siddeley HS-748 * **",
+      "makeModel": "Hawker Siddeley HS-748",
       "additonalCrew": 4,
       "seats": 53,
       "cruise": 244,
@@ -4995,7 +5017,7 @@
       "basePrice": "$229,800.00"
     },
     {
-      "makeModel": "Howard Aero 500 * **",
+      "makeModel": "Howard Aero 500",
       "additonalCrew": 0,
       "seats": 14,
       "cruise": 270,
@@ -5083,7 +5105,7 @@
       "basePrice": "$1,639,500.00"
     },
     {
-      "makeModel": "Ilyushin Il-18D * **",
+      "makeModel": "Ilyushin Il-18D",
       "additonalCrew": 9,
       "seats": 100,
       "cruise": 310,
@@ -5435,7 +5457,7 @@
       "basePrice": "$66,750.00"
     },
     {
-      "makeModel": "Lockheed C-130 (Capt Sim) * **",
+      "makeModel": "Lockheed C-130 (Capt Sim)",
       "additonalCrew": 5,
       "seats": 64,
       "cruise": 320,
@@ -5457,7 +5479,7 @@
       "basePrice": "$5,238,000.00"
     },
     {
-      "makeModel": "Lockheed C-130 (Generic) * **",
+      "makeModel": "Lockheed C-130 (Generic)",
       "additonalCrew": 5,
       "seats": 64,
       "cruise": 320,
@@ -5479,7 +5501,7 @@
       "basePrice": "$5,238,000.00"
     },
     {
-      "makeModel": "Lockheed Constellation * **",
+      "makeModel": "Lockheed Constellation",
       "additonalCrew": 5,
       "seats": 64,
       "cruise": 290,
@@ -5501,7 +5523,7 @@
       "basePrice": "$4,854,000.00"
     },
     {
-      "makeModel": "Lockheed L049 (A2A) * **",
+      "makeModel": "Lockheed L049 (A2A)",
       "additonalCrew": 4,
       "seats": 49,
       "cruise": 230,
@@ -5611,7 +5633,7 @@
       "basePrice": "$380,000.00"
     },
     {
-      "makeModel": "Lockheed P-3C (L-188) * **",
+      "makeModel": "Lockheed P-3C (L-188)",
       "additonalCrew": 8,
       "seats": 95,
       "cruise": 330,
@@ -5699,7 +5721,7 @@
       "basePrice": "$57,030.00"
     },
     {
-      "makeModel": "Martin 404 * **",
+      "makeModel": "Martin 404",
       "additonalCrew": 3,
       "seats": 42,
       "cruise": 260,
@@ -5743,7 +5765,7 @@
       "basePrice": "$152,250.00"
     },
     {
-      "makeModel": "McDonnell Douglas DC-10-30F * **",
+      "makeModel": "McDonnell Douglas DC-10-30F",
       "additonalCrew": 19,
       "seats": 401,
       "cruise": 483,
@@ -5941,7 +5963,7 @@
       "basePrice": "$62,001.00"
     },
     {
-      "makeModel": "NAMC YS-11 * **",
+      "makeModel": "NAMC YS-11",
       "additonalCrew": 6,
       "seats": 66,
       "cruise": 236,
@@ -6073,7 +6095,7 @@
       "basePrice": "$50,250.00"
     },
     {
-      "makeModel": "North American T-39 Sabreliner * **",
+      "makeModel": "North American T-39 Sabreliner",
       "additonalCrew": 1,
       "seats": 9,
       "cruise": 430,
@@ -7239,7 +7261,7 @@
       "basePrice": "$217,919.00"
     },
     {
-      "makeModel": "Saab 2000 * **",
+      "makeModel": "Saab 2000",
       "additonalCrew": 4,
       "seats": 52,
       "cruise": 370,
@@ -7261,7 +7283,7 @@
       "basePrice": "$5,261,400.00"
     },
     {
-      "makeModel": "Saab 340B * **",
+      "makeModel": "Saab 340B",
       "additonalCrew": 3,
       "seats": 38,
       "cruise": 290,
@@ -7503,7 +7525,7 @@
       "basePrice": "$379,500.00"
     },
     {
-      "makeModel": "Sikorsky S-92A Cougar * **",
+      "makeModel": "Sikorsky S-92A Cougar",
       "additonalCrew": 1,
       "seats": 21,
       "cruise": 151,
@@ -7855,7 +7877,7 @@
       "basePrice": "$68,430.00"
     },
     {
-      "makeModel": "Tupolev Tu-124 * **",
+      "makeModel": "Tupolev Tu-124",
       "additonalCrew": 5,
       "seats": 58,
       "cruise": 420,
@@ -7899,7 +7921,7 @@
       "basePrice": "$41,400.00"
     },
     {
-      "makeModel": "Vickers Viscount * **",
+      "makeModel": "Vickers Viscount",
       "additonalCrew": 5,
       "seats": 63,
       "cruise": 285,
@@ -8009,7 +8031,7 @@
       "basePrice": "$96,450.00"
     },
     {
-      "makeModel": "Yakovlev Yak-40 * **",
+      "makeModel": "Yakovlev Yak-40",
       "additonalCrew": 2,
       "seats": 32,
       "cruise": 254,

@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
-import { To, useNavigate } from "react-router-dom";
+// import { To, useNavigate } from "react-router-dom";
 import Modal from 'react-modal';
+import { Search } from '../finder/Search';
+import { Planes } from '../finder/Planes';
+import { PlanesManual } from '../finder/PlanesManual';
+import { planeDataType } from '../../types';
 
 Modal.setAppElement('#root');
 
+const initialManual = {
+  cruiseSpeed: 0,
+  fuelConsumption: 0,
+  mtow: 0
+};
+
 export const Home = () => {
-  const navigate = useNavigate();
-  const findStuff = (where: To) => {
-    navigate(where);
-  };
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [selectedPlane, setSelectedPlane] = useState<string | boolean>(false);
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const [manualData, setManualData] = useState<planeDataType>(initialManual);
+  const [searchType, setSearchType] = useState<string>('model-fse');
 
   function openModal() {
     setIsOpen(true);
@@ -19,21 +28,22 @@ export const Home = () => {
     setIsOpen(false);
   }
 
+
+
   return (
     <>
       <div className='home-container'>
-        <h2 className='home-intro-text'>What are you looking to alias?</h2>
+        <Search
+          selectedPlane={selectedPlane}
+          setSelectedPlane={setSelectedPlane}
+          setSearchType={setSearchType}
+          searchType={searchType}
+          manualData={manualData}
+          setManualData={setManualData}
+        />
+        {searchType === 'model-fse' && selectedPlane && <Planes selectedPlane={selectedPlane} />}
+        {searchType === 'manual' && <PlanesManual manualData={manualData} />}
 
-        <main className='home'>
-          <div className='home-fly-fse-plane' onClick={() => findStuff('/fse')}>
-            <em>A plane on FSE</em>
-          Find what planes on my sim I can alias it to
-          </div>
-          <div className='home-sim-plane' onClick={() => findStuff('/sim')}>
-            <em>A plane on my sim</em>
-          Find what plane on FSE I can alias it to
-          </div>
-        </main>
         <div className='what' onClick={openModal}>
           <p>What is this about? 🤷</p>
         </div>
