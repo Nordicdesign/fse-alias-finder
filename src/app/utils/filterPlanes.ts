@@ -50,7 +50,6 @@ export const filterManualPlanes = (props:FilterManualProps): Plane[] => {
   const { data, manualData } = props;
   const { cruiseSpeed, fuelConsumption, mtow } = manualData;
 
-  // Remove itself
   let result = data.data;
 
   // similar cruise speed
