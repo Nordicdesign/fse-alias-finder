@@ -28,12 +28,12 @@ header {
     font-weight: bold;
     font-size: 2rem;
     line-height: 1;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 
     @media screen and (max-width: $xsmall) {
       font-size: 1.5rem;
     }
-    
+
     em {
       font-size: 3rem;
       @media screen and (max-width: $xsmall) {
@@ -42,7 +42,7 @@ header {
     }
   }
   p {
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: white;
     margin-left: auto;
 
@@ -52,9 +52,9 @@ header {
     }
   }
   sup {
-    font-size: .6rem;
+    font-size: 0.6rem;
     font-weight: normal;
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
     background: tomato;
     padding: 2px;
     border-radius: 2px;

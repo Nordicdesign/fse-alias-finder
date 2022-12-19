@@ -2,11 +2,11 @@
   margin: 32px auto;
   width: 96%;
   max-width: 1200px;
-  padding: 0 $baseline $baseline*3;
+  padding: 0 $baseline $baseline * 3;
 
   @media screen and (max-width: $small) {
     margin-top: 16px;
-    padding: 0 0 $baseline*3;
+    padding: 0 0 $baseline * 3;
   }
 }
 
@@ -17,8 +17,8 @@
   grid-gap: 32px;
 
   @media screen and (max-width: 600px) {
-      display: block;
-      height: auto;
+    display: block;
+    height: auto;
   }
 
   .home-fly-fse-plane,
