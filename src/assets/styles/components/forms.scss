@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import "../variables.scss";
 form {
   margin: 0 0 $baseline * 3;
 
@@ -80,7 +80,7 @@ input {
 
 .slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 22px;
   width: 22px;
   left: 6px;
