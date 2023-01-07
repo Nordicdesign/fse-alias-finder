@@ -63,17 +63,17 @@ export const Home = () => {
 
         <p>
           This is a tool for <a href="https://fseconomy.net/">FSEconomy</a>, a
-          multi-player "persistent world" add-on for flight simulators. The idea
-          is to help pilots find planes with similar performances so they can
-          alias them on their sim.
+          multi-player &quot;persistent world&quot; add-on for flight
+          simulators. The idea is to help pilots find planes with similar
+          performances so they can alias them on their sim.
         </p>
 
         <hr />
 
         <h3>Find alias to a FSE plane</h3>
         <p>
-          Let's say you want to fly a Aeronca Champion, but your sim does not
-          have that model. This option will help you find planes similar in
+          Let&apos;s say you want to fly a Aeronca Champion, but your sim does
+          not have that model. This option will help you find planes similar in
           performance, and hopefully you have one of them installed, so you can
           alias it to the Champion and fly your plane.
         </p>

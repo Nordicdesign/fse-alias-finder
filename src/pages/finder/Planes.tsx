@@ -101,8 +101,8 @@ export const Planes = (props: PlanesProps) => {
             .
           </p>
           <p>
-            If you burn more you'll always be fine, just try not to burn too
-            little.{" "}
+            If you burn more you&apos;ll always be fine, just try not to burn
+            too little.{" "}
           </p>
           <p>
             Check the GPH of your aliased plane, if your model burns less, try
