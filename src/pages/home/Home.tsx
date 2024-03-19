@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-// import { To, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Modal from "react-modal";
 import { Search } from "../finder/Search";
 import { Planes } from "../finder/Planes";
 import { PlanesManual } from "../finder/PlanesManual";
 import { planeDataType } from "../../types";
-
-Modal.setAppElement("#root");
 
 const initialManual = {
   cruiseSpeed: 0,
@@ -19,6 +16,8 @@ export const Home = () => {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
   const [manualData, setManualData] = useState<planeDataType>(initialManual);
   const [searchType, setSearchType] = useState<string>("model-fse");
+
+  Modal.setAppElement("body");
 
   function openModal() {
     setIsOpen(true);
