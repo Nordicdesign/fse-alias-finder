@@ -41,7 +41,7 @@ export const Home = () => {
         )}
         {searchType === "manual" && <PlanesManual manualData={manualData} />}
 
-        <div className="what" onClick={openModal}>
+        <div className="what" onClick={openModal} role="button">
           <p>What is this about? 🤷</p>
         </div>
       </div>
