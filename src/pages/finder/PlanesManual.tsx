@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import data from "../../app/data/aircraft.json";
 import { filterManualPlanes } from "../../app/utils/filterPlanes";
 import { Plane, calcTotalFuel } from "../../app/utils/calculateTotalFuel";
 import { planeDataType } from "../../types";
+import { Sidenav } from "../components/Sidenav";
 
 interface PlanesProps {
   manualData: planeDataType;
@@ -12,7 +13,7 @@ export const PlanesManual = (props: PlanesProps) => {
   const { manualData } = props;
 
   const [filteredPlanes, setFilteredPlanes] = useState<Plane[] | undefined>();
-  const [showManualData, setShowManualData] = useState<boolean>(false);
+  const [showManualData, setShowManualData] = useState(false);
 
   useEffect(() => {
     setFilteredPlanes(filterManualPlanes({ data, manualData }));
@@ -67,33 +68,7 @@ export const PlanesManual = (props: PlanesProps) => {
             </>
           )}
         </div>
-        <div className="finder-notes">
-          <p className="note">
-            Highly experimental! Don&apos;t be surprised if things are wrong,
-            for any feedback find me on FSE&apos;s Discord (Nordic-FSE)
-          </p>
-          <h2>About fuel burn</h2>
-          <p>
-            FSEconomy will check that you use{" "}
-            <em>
-              around the same amount of fuel as your aliased model, or more
-            </em>
-            .
-          </p>
-          <p>
-            If you burn more you&apos;ll always be fine, just try not to burn
-            too little.{" "}
-          </p>
-          <p>
-            Check the GPH of your aliased plane, if your model burns less, try
-            to burn as much as possible to get close to it.
-          </p>
-          <p>
-            <a href="https://sites.google.com/site/fseoperationsguide/aircraft/fuel-usage-requirements">
-              Fuel burn information on the FSE Manual
-            </a>
-          </p>
-        </div>
+        <Sidenav />
       </div>
     </div>
   );
