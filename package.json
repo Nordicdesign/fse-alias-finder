@@ -20,6 +20,7 @@
     "@types/react-dom": "^18.2.25",
     "@typescript-eslint/parser": "^7.7.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
