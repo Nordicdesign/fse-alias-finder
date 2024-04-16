@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
@@ -20,4 +21,9 @@ module.exports = {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
   },
+  settings: {
+    "react": {
+      "version": "detect", 
+    },
+  }
 };
